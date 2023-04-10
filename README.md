@@ -12,4 +12,8 @@
 - Список всіх продуктів, наявних в БД: http://localhost:3001/products.
 - Список всіх замовлень, наявних в БД: http://localhost:3001/orders.
 
-- Перегляд сайту (без серверу, у відкритому доступі): https://gentle-creponne-7351f1.netlify.app/.
+Подивитись сайт без розгортання:
+
+- Перегляд сайту (з сервером): https://gentle-creponne-7351f1.netlify.app/.
+- Список всіх продуктів, наявних в БД (render.com): https://ss-final-project.onrender.com/products.
+- Список всіх замовлень, наявних в БД: https://ss-final-project.onrender.com/orders.
