@@ -14,7 +14,7 @@ function TestimonialCircle({ h2, text }) {
 
 export default function Testimonials() {
   return (
-    <div className={styles.testimonialsWrapper}>
+    <div className={styles.testimonialsWrapper} id="testimonials">
       <div className={styles.imgContainer}>
         <img src={testimonials1} alt="testimonials-bg" />
       </div>

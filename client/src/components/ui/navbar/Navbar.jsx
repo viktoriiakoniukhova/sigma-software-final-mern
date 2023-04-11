@@ -4,16 +4,54 @@ import logo from "../../../assets/logo.svg";
 import search from "../../../assets/search.svg";
 import cart from "../../../assets/cart.svg";
 import styles from "./Navbar.module.scss";
+import vars from "../../../_variables.scss";
 import { Link } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
 function Nav() {
+  const IsCurrentPathHome = useLocation().pathname === "/";
   return (
     <nav>
-      <Link to="/">Home</Link>
-      <a href="#about">About</a>
-      <a href="#">Pages</a>
-      <a href="#products">Products</a>
-      <a href="#news">News</a>
+      {IsCurrentPathHome ? (
+        <>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#testimonials">Pages</a>
+          <a href="#products">Products</a>
+          <a href="#news">News</a>
+        </>
+      ) : (
+        <>
+          <Link to="/">Home</Link>
+          <Link
+            to="/"
+            onClick={(e) => e.preventDefault()}
+            style={{ color: `${vars.mediumGrey}`, cursor: "default" }}
+          >
+            About
+          </Link>
+          <Link
+            to="/"
+            onClick={(e) => e.preventDefault()}
+            style={{ color: `${vars.mediumGrey}`, cursor: "default" }}
+          >
+            Pages
+          </Link>
+          <Link
+            to="/"
+            onClick={(e) => e.preventDefault()}
+            style={{ color: `${vars.mediumGrey}`, cursor: "default" }}
+          >
+            Products
+          </Link>
+          <Link
+            to="/"
+            onClick={(e) => e.preventDefault()}
+            style={{ color: `${vars.mediumGrey}`, cursor: "default" }}
+          >
+            News
+          </Link>
+        </>
+      )}
     </nav>
   );
 }

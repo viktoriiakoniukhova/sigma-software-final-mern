@@ -4,6 +4,7 @@
 .testimonialsWrapper {
   position: relative;
   display: flex;
+  padding: 4em 0;
   @include mx.imgCont;
   @include mx.xl {
     min-height: 65em;
