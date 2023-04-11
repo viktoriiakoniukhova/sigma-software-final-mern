@@ -14,6 +14,4 @@
 
 Подивитись сайт без розгортання:
 
-- Перегляд сайту (з сервером): https://gentle-creponne-7351f1.netlify.app/.
-- Список всіх продуктів, наявних в БД (render.com): https://ss-final-project.onrender.com/products.
-- Список всіх замовлень, наявних в БД: https://ss-final-project.onrender.com/orders.
+- Перегляд сайту (без серверу): https://gentle-creponne-7351f1.netlify.app/.
