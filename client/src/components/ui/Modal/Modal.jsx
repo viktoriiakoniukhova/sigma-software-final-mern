@@ -80,7 +80,6 @@ export default function Modal({ isShowing, hide, productData }) {
                   onClick={(e) => e.stopPropagation()}
                 >
                   <div className={styles.modalContent}>
-                    {" "}
                     <div className={styles.modalHeader}>
                       <Button
                         type="darkBlue"
