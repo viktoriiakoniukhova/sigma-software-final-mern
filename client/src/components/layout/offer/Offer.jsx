@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Offer.module.scss";
+import Loader from "../../ui/loader/Loader";
 
 export default function Offer({ data }) {
   return (
@@ -8,7 +9,11 @@ export default function Offer({ data }) {
         <span>Offer</span>
         <h2>We Offer Organic For You</h2>
       </header>
-      <div className={styles.content}>{data}</div>
+      {data.length ? (
+        <div className={styles.content}>{data}</div>
+      ) : (
+        <Loader color={"#fff"} />
+      )}
     </div>
   );
 }

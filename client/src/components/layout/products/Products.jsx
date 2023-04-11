@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import styles from "./Products.module.scss";
 import Button from "../../ui/button/Button";
+import Loader from "../../ui/loader/Loader";
+import vars from "../../../_variables.scss";
 
 export default function Products({ data }) {
   const halfLength = Math.ceil(data.length / 2);
@@ -19,16 +21,22 @@ export default function Products({ data }) {
 
   return (
     <div className={styles.productsWrapper} id="products" ref={ref}>
-      <div className={styles.productsList}>
-        {dataLeft}
-        {!isFold && dataRight}
-      </div>
-      <Button
-        hasArrow={true}
-        type="darkBlue"
-        text={isFold ? "Show All" : "Hide All"}
-        onClick={() => setIsFold((prevIsFold) => !prevIsFold)}
-      />
+      {data.length ? (
+        <>
+          <div className={styles.productsList}>
+            {dataLeft}
+            {!isFold && dataRight}
+          </div>
+          <Button
+            hasArrow={true}
+            type="darkBlue"
+            text={isFold ? "Show All" : "Hide All"}
+            onClick={() => setIsFold((prevIsFold) => !prevIsFold)}
+          />
+        </>
+      ) : (
+        <Loader color={vars.darkBlue} />
+      )}
     </div>
   );
 }
