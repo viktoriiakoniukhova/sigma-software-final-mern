@@ -21,7 +21,7 @@ db.once("open", () => {
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://gentle-creponne-7351f1.netlify.app"
+    "https://imaginative-trifle-7fb0f9.netlify.app"
   );
   res.setHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.setHeader(
