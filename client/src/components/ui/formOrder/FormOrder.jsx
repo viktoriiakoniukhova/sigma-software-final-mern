@@ -10,7 +10,7 @@ export default function FormOrder({
   totalPrice,
   totalDiscount,
 }) {
-  const URL = "http://localhost:3001/insert";
+  const URL = `${base_url}insert`;
 
   const navigate = useNavigate();
   const [formData, setFormData] = React.useState({

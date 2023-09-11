@@ -10,12 +10,13 @@ import News from "../../components/layout/news/News";
 import Newsletter from "../../components/layout/newsletter/Newsletter";
 import ProductCard from "../../components/ui/productCard/ProductCard";
 import { useCartProducts } from "../../App";
+import { base_url } from "../../utils/baseUrl";
 
 export default function MainPage() {
   const [cartProducts, setCartProducts] = useCartProducts();
 
   // Store fetched products data
-  const URL = "http://localhost:3001/products";
+  const URL = `${base_url}products`;
   const [productsData, setProductsData] = React.useState([]);
 
   React.useEffect(() => {

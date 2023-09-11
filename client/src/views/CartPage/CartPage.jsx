@@ -12,7 +12,7 @@ export default function CartPage() {
   const [cartProducts, setCartProducts] = useCartProducts();
 
   // Store fetched products data
-  const URL = "http://localhost:3001/products";
+  const URL = `${base_url}products`;
   const [productsData, setProductsData] = React.useState([]);
 
   React.useEffect(() => {
