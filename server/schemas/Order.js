@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const OrderSchema = new mongoose.Schema({
+const Order = new mongoose.Schema({
   fname: {
     type: String,
     required: true,
@@ -40,5 +40,4 @@ const OrderSchema = new mongoose.Schema({
   ],
 });
 
-const Order = mongoose.model("Order", OrderSchema);
 module.exports = Order;

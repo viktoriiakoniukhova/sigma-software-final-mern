@@ -4,11 +4,16 @@ const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 
-const ProductModel = require("./models/Product");
-const OrderModel = require("./models/Order");
-
 const PORT = 3001;
+
 const db = mongoose.createConnection(process.env.MONGODB_URL);
+
+const ProductModel = db.model("Product", require("./schemas/Product"));
+const OrderModel = db.model("Order", require("./schemas/Order"));
+
+db.once("open", () => {
+  console.log("MongoDB database connection established successfully");
+});
 
 // app.use(cors());
 
@@ -16,7 +21,7 @@ const db = mongoose.createConnection(process.env.MONGODB_URL);
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://gentle-creponne-7351f1.netlify.app"
+    "https://sigma-software-final-mern-igdn6kq5h-viktoriiakoniukhova.vercel.app/"
   );
   res.setHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.setHeader(
