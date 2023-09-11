@@ -1,4 +1,5 @@
 // const cors = require("cors");
+const dotenv = require("dotenv").config();
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
@@ -6,8 +7,8 @@ const app = express();
 const ProductModel = require("./models/Product");
 const OrderModel = require("./models/Order");
 
-const ATLAS_URI = process.env.MONGO_DB;
 const PORT = 3001;
+const db = mongoose.createConnection(process.env.MONGODB_URL);
 
 // app.use(cors());
 
@@ -31,10 +32,6 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-
-mongoose.connect(ATLAS_URI, {
-  useNewUrlParser: true,
-});
 
 app.get("/products", async (req, res) => {
   const result = await ProductModel.find({});
