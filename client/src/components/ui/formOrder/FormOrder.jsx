@@ -3,6 +3,7 @@ import styles from "./FormOrder.module.scss";
 import Button from "../../../components/ui/button/Button";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
+import { base_url } from "../../../utils/baseUrl";
 
 export default function FormOrder({
   orderProducts,

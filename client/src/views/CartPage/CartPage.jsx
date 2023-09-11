@@ -7,6 +7,7 @@ import ProductCardCart from "../../components/ui/productCardCart/ProductCardCart
 import { useCartProducts } from "../../App";
 import currencyFilter from "../../filters/currency.filter";
 import { Link, useLocation } from "react-router-dom";
+import { base_url } from "../../utils/baseUrl";
 
 export default function CartPage() {
   const [cartProducts, setCartProducts] = useCartProducts();
