@@ -3,6 +3,7 @@
 # dependencies
 client/node_modules
 server/node_modules
+server/.env
 client/.pnp
 client/.pnp.js
 
@@ -11,3 +12,4 @@ client/coverage
 
 # production
 client/build
+
