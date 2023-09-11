@@ -21,7 +21,7 @@ db.once("open", () => {
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://sigma-software-final-mern-igdn6kq5h-viktoriiakoniukhova.vercel.app/"
+    "https://gentle-creponne-7351f1.netlify.app"
   );
   res.setHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.setHeader(
